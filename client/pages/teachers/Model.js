@@ -11,6 +11,8 @@ import {
   } from '@chakra-ui/react';
   import React from 'react';
 import { useDisclosure } from '@chakra-ui/react'
+
+
   function Model() {
     const OverlayOne = () => (
       <ModalOverlay
@@ -25,6 +27,12 @@ import { useDisclosure } from '@chakra-ui/react'
     return (
       <>
         <Button
+        flex={1}
+        fontSize={'sm'}
+        rounded={'full'}
+        _focus={{
+          bg: 'gray.200',
+        }}
           onClick={() => {
             setOverlay(<OverlayOne />)
             onOpen()

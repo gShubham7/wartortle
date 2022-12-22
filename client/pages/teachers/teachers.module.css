@@ -1,16 +1,17 @@
 .teachers {
-    margin: auto;
-    width: 80%;
+    width: 100%;
     justify-content: center;
     /* border: 1px solid red; */
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .gridbox {
+    width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 30px;
 }
+
 /* .gridbox > div {
  display: flex;
  padding: 15px;
@@ -35,8 +36,12 @@
    
 } */
 .filters {
-  margin-top: 20px;
-  gap: 40px;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+  
 }
 /* .box > * {
     font-weight: bold;
