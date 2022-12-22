@@ -1,0 +1,21 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    
+}
+
+
+.bottom{
+    
+    position: fixed;
+    top: auto;
+    bottom: 10px;
+    width: 100%;
+    z-index: 500;
+  justify-content:center ;
+
+}
