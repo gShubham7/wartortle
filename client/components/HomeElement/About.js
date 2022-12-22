@@ -7,7 +7,7 @@ import {
     StatNumber,
     useColorModeValue,
   } from '@chakra-ui/react';
-  
+  import style from "./common.module.css"
  
   function StatsCard(props) {
     const { title, stat } = props;
@@ -39,8 +39,8 @@ import {
           fontWeight={'bold'}>
           What is our company doing?
         </chakra.h1>
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
-          <StatsCard title={'We serve'} stat={'50,000 people'} />
+        <SimpleGrid     className={style.grid}  columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
+          <StatsCard    title={'We serve'} stat={'50,000 people'}  />
           <StatsCard title={'In'} stat={'30 different countries'} />
           <StatsCard title={'Who speak'} stat={'100 different languages'} />
         </SimpleGrid>

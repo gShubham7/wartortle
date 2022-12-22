@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import About from './About';
- 
+import AOS from "aos"
 import style from "./common.module.css";
 import { Top } from './Top';
+import 'aos/dist/aos.css';
+import Zoom from 'react-reveal/Fade';
+import { AutoMoving } from './AutoMoving';
 export const Scroll = () => {
+
+  useEffect(()=>{
+    AOS.init();
+    AOS.refresh()
+  },[])
+ 
+  
   return (
-    <div >
+<div >
      
     
    
@@ -16,14 +26,20 @@ export const Scroll = () => {
     
       
       <div className={style.mdiv}>
+      <Zoom left>
       <div className={style.b}>
+     
+    
        <div data-aos="fade-down-left" data-aos-duration="2000">
-         {" "}
-         <img
+       
+      
+        <img
            src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_630,q_auto:eco,dpr_1,f_auto,fl_progressive/image/test/image_zoom_widget/image_zoom_widget_img_1.png"
            alt=""
          />
+       
        </div>
+       
        <div data-aos="fade-down-right" data-aos-duration="4000">
          <img
            src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_630,q_auto:eco,dpr_1,f_auto,fl_progressive/image/test/image_zoom_widget/image_zoom_widget_img_2.png"
@@ -31,7 +47,7 @@ export const Scroll = () => {
          />
        </div>
      </div>
-
+     </Zoom >
      <div data-aos-duration="2000" className={style.c}>
        <img
          data-aos="fade-down-left"
@@ -87,11 +103,14 @@ export const Scroll = () => {
        </div>
      </div>
 
-     <div
+ 
+
+   <div
        data-aos="zoom-in-up"
        data-aos-duration="1000"
        className={style.f2}
      >
+        <Zoom right> 
        <div>
          <img
            src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_150,q_auto:eco,dpr_2,f_auto,fl_progressive/image/test/trainer-parallax/tile-3.png"
@@ -116,7 +135,12 @@ export const Scroll = () => {
            alt=""
          />
        </div>
+       </Zoom>
      </div>
+ 
+
+       <AutoMoving/>
+
       </div>
  
    </div>

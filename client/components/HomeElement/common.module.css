@@ -1,7 +1,7 @@
 .video_frame {
 position: fixed;
 top:50px;
-  height: fit-content;
+   height:  100%;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -14,23 +14,13 @@ top:50px;
   transition: opacity 600ms ease 0s;
   position: relative;
   object-fit: cover;
-  height: 80vh;
+  min-height: 100%;
   will-change: transform;
   opacity: 1;
 }
 
 
-.contant {
-  position: absolute;
-  top: 0;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  z-index:1;
-  width: 100%;
  
-  height:100%;
-}
 
 .clock {
     position: relative;
@@ -48,56 +38,7 @@ top:50px;
     font-weight: bold;
     padding: 10px;
   }
-  .left{
-    width: 100%;
-   
-    
-    align-items: center;
- }
-.left > svg:nth-child(1) {
-   position: absolute;
-   top: 5%;
- 
-   width:43% ;
-  height: auto;
- 
   
-}
-.left > svg:nth-child(2) {
-    position: absolute;
-    top: 48%;
-   width: 43%;
-  height: auto;
- 
- 
- 
-}
-
-.right{
-    width: 100%;
-   
-   
-    align-items: center;
-
-}
-.right > svg:nth-child(1) {
- 
-    position:absolute;
-    top: -14%;
-   
-   
- 
-}
-
-.right > svg:nth-child(2) {
-  position:absolute;
-  top: 47%;
-   
-  
-  
-  
-  
-}
 
 .body {
   position: relative;
@@ -110,6 +51,12 @@ top:50px;
   
 }
 
+.mdiv{
+   
+   margin-top: 50px;
+}
+
+ 
 .b {
   display: flex;
   gap: 50px;
@@ -173,6 +120,12 @@ top:50px;
   margin-top: 20px;
 }
 
+.move{
+   position: ;
+   width: 100%;
+   border: 1px solid red;
+   height: fit-content;
+}
 /* @media screen and (max-width:1200px) {
     .mainbody{
     

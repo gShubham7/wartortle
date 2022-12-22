@@ -14,9 +14,10 @@ export default function App({ Component, pageProps }) {
       <ChakraProvider>
          <Nav/>
         <Component {...pageProps} />
- 
+          
+        <Bottom/>
     </ChakraProvider>
-             <Bottom/>
+             
          </div>
  
   );

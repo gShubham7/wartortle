@@ -23,7 +23,7 @@ export default function Nav() {
 
   return (
     <div className={style.navbar}>
-      <Box bg={useColorModeValue("rgba(244, 215, 235, 0.98)", "gray.900")} px={4}>
+      <Box bg={useColorModeValue("rgb(95, 68, 68)", "gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>Logo</Box>
 
