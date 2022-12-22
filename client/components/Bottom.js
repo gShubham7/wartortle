@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import style from "./Navbar.module.css"
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+ 
 const StyledFab = styled(Fab)({
   position: "absolute",
   zIndex: 1,
@@ -16,32 +16,21 @@ const StyledFab = styled(Fab)({
 });
 
  
-
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: 'rgba(200,200,200,.5)',
-    },
-  },
-});
+ 
 
 export default function Bottom() {
 
  
   return (
     <div className={style.bottom}>
-      <React.Fragment  >
- 
-      <AppBar position="relative" color="primary" enableColorOnDark sx={{  width:"60%",margin:"auto",borderRadius:"50px"}}>
+     <AppBar position="relative" color="primary"   sx={{  width:"60%",margin:"auto",borderRadius:"50px"}}>
          <Toolbar>
           <StyledFab color="secondary" aria-label="add">
             <AddIcon />
           </StyledFab>
          </Toolbar>    
       </AppBar>
-     
-    </React.Fragment>
+  
         </div>
   );
 }

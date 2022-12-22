@@ -1,20 +1,23 @@
 import { ChakraProvider } from "@chakra-ui/react";
  
-import Bottom from "../components/Bottom";
+ 
 import { Top } from "../components/HomeElement/Top";
-import Nav from "../components/Navbar";
+ 
 import { Provider } from "react-redux";
 import { store } from "../redux/store";
-
+import Nav from "../components/Navbar";
+ import Bottom from "../components/Bottom"
 export default function App({ Component, pageProps }) {
   return (
-    <ChakraProvider>
-      <Nav/>
-      <Provider store={store}>
+         <div>
+
+      <ChakraProvider>
+         <Nav/>
         <Component {...pageProps} />
-      </Provider>
-        <Bottom/>
+ 
     </ChakraProvider>
+             <Bottom/>
+         </div>
  
   );
 }
