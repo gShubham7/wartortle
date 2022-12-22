@@ -1,5 +1,6 @@
 
 import { Box, useColorModeValue } from "@chakra-ui/react"
+import Footer from "../components/Footer"
  
 import { Scroll } from "../components/HomeElement/Scroll"
 import { Top } from "../components/HomeElement/Top"
@@ -10,9 +11,11 @@ export default function Home() {
 
     <div>
       <Top />
-      <Box bg={useColorModeValue("gray.100", "gray.900")} className={style.homebox}  >
+      <Box bg={useColorModeValue("	rgb(229, 249, 255,.8)", "rgb(0, 0, 0,.8)")} className={style.homebox}  >
 
         <Scroll />
+
+        <Footer/>
 
       </Box>
     </div>

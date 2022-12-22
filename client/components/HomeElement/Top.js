@@ -27,9 +27,10 @@ export const Top = () => {
 
                 src="/intro.mp4"
             ></video>
-
+            
+           
         </div>
-
+ 
 
     )
 }

@@ -1,21 +1,11 @@
+import { AddIcon } from "@chakra-ui/icons";
+import { Box, Button, Flex, useColorModeValue } from "@chakra-ui/react";
 import * as React from "react";
-import { styled } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Fab from "@mui/material/Fab";
-import AddIcon from "@mui/icons-material/Add";
+ 
 import style from "./Navbar.module.css"
  
-const StyledFab = styled(Fab)({
-  position: "absolute",
-  zIndex: 1,
-  top: -15,
-  left: 0,
-  right: 0,
-  margin: "0 auto",
-});
 
- 
+//   <AddIcon />
  
 
 export default function Bottom() {
@@ -23,14 +13,24 @@ export default function Bottom() {
  
   return (
     <div className={style.bottom}>
-     <AppBar position="relative" color="primary"   sx={{  width:"60%",margin:"auto",borderRadius:"50px"}}>
-         <Toolbar>
-          <StyledFab color="secondary" aria-label="add">
-            <AddIcon />
-          </StyledFab>
-         </Toolbar>    
-      </AppBar>
-  
+     
+     <Box bg={useColorModeValue('	rgb(95, 68, 68,.6)', 'gray.900')} width="60%" borderRadius="10px" margin="auto" px={4}>
+        <Flex h={16} alignItems={'center'} justifyContent={'center'}>
+    
+            <Button
+              variant={'solid'}
+              colorScheme={'teal'}
+              size={'sm'}
+              mr={4}
+               >
+             <AddIcon />
+            </Button>
+          
+          </Flex>
+
+        
+      </Box>
+ 
         </div>
   );
 }
