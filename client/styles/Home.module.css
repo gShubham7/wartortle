@@ -6,3 +6,15 @@
    top: 80vh;
   height:  auto;
  }
+
+
+ @media screen and (max-width: 800px) {
+    .homebox{
+       
+         top: 70vh;
+        
+       }
+     
+   
+      
+ }
