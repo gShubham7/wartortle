@@ -10,7 +10,7 @@ export const login = (creds) => async (dispatch) => {
   dispatch({ type: LOGIN_REQUEST });
   try {
     let res = await axios.post(
-      "https://sample-backend-cvar.onrender.com/user/login",
+      "https://healthy-duck-jewelry.cyclic.app/auth/login",
       creds
     );
     dispatch({ type: LOGIN_SUCCESS, payload: res.data });

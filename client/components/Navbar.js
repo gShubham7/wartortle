@@ -14,6 +14,8 @@ import {
   useColorMode,
   Center,
   Input,
+  Image,
+  Text,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import style from "./Navbar.module.css";
@@ -24,11 +26,15 @@ export default function Nav() {
 
   return (
     <div className={style.navbar}>
-      <Box bg={useColorModeValue("rgb(95, 68, 68)", "gray.900")} px={4}>
+      <Box bg={useColorModeValue("rgb(52, 91, 153)", "gray.900")} px={4} py={2}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>
-
-            <Link href="/">Logo</Link>
+            <Link href="/">
+              <Flex alignItems={"center"}>
+                <Image src="/logo.png" width="16%" marginLeft={"10px"}></Image>
+                <Text fontStyle={"italic"} fontWeight={"bold"} fontSize={"25px"}>Qlick2Learn</Text>
+              </Flex>
+            </Link>
           </Box>
 
           <Flex width="50%" alignItems={"center"} gap="10px">

@@ -20,22 +20,6 @@
   opacity: 1;
 }
 
-.clock {
-  position: absolute;
-  width: fit-content;
-  margin: auto;
-  top: 30%;
-  left: 43%;
-  border-radius: 5px;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  font-size: 40px;
-  color: tomato;
-z-index: 1;
-  padding: 20px;
-}
-
 .body {
   position: relative;
 
@@ -45,8 +29,6 @@ z-index: 1;
   height: auto;
   padding-bottom: 80px;
 }
-
- 
 
 .mdiv {
   margin-top: 50px;
@@ -86,10 +68,10 @@ z-index: 1;
   margin: auto;
   margin-top: 20px;
 }
-.d>img {
-   width: 100%;
+.d > img {
+  width: 100%;
   border-radius: 7px;
- }
+}
 
 .f2 {
   display: grid;
@@ -285,15 +267,7 @@ z-index: 1;
  } */
 
 @media screen and (max-width: 800px) {
-  .clock {
-    top: 20%;
-    left: 36%;
-    font-size: 35px;
-    padding: 15px;
-  }
   #v_bag {
-  
-   min-height: 100vh;
-   
- }
+    min-height: 100vh;
+  }
 }
