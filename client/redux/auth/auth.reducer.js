@@ -11,7 +11,7 @@ const checkAdminAuth = "";
 
 // const AdminToken = "admin@gmail.com#admin";
 const initialState = {
-  token: { token: LocalToken },
+  token: "",
   isAuth: check,
   loading: false,
   error: false,
@@ -39,8 +39,7 @@ export const authReducer = (state = initialState, { type, payload }) => {
         // AdminIsAuth: payload.token == "admin@gmail.com#admin",
       };
     }
-    case LOGIN_ERROR: {
-      localStorage.setItem("token", payload);
+    case LOGIN_ERROR: { 
       return {
         ...state,
         loading: false,
