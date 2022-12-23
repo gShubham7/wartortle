@@ -10,13 +10,14 @@ import Nav from "../components/Navbar";
 export default function App({ Component, pageProps }) {
   return (
          <div>
-
+   
       <ChakraProvider>
          <Nav/>
         <Component {...pageProps} />
           
         <Bottom/>
     </ChakraProvider>
+   
              
          </div>
  

@@ -1,10 +1,11 @@
 .video_frame {
-position: fixed;
-top:50px;
-   height:  100%;
+  position: fixed;
+  top: 50px;
+  min-height: 100%;
   width: 100%;
   justify-content: center;
   align-items: center;
+  text-align: center;
   z-index: 0;
 }
 
@@ -19,44 +20,38 @@ top:50px;
   opacity: 1;
 }
 
-
- 
-
 .clock {
-    position: relative;
-    width: 30%;
-    height: fit-content;
-    border-radius: 7px;
-  
-    margin: auto;
- 
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    
-      
-    font-weight: bold;
-    padding: 10px;
-  }
-  
+  position: absolute;
+  width: fit-content;
+  margin: auto;
+  top: 30%;
+  left: 43%;
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 40px;
+  color: tomato;
+z-index: 1;
+  padding: 20px;
+}
 
 .body {
   position: relative;
 
   align-items: center;
   width: 100%;
-  
+
   height: auto;
   padding-bottom: 80px;
-  
-}
-
-.mdiv{
-   
-   margin-top: 50px;
 }
 
  
+
+.mdiv {
+  margin-top: 50px;
+}
+
 .b {
   display: flex;
   gap: 50px;
@@ -69,12 +64,15 @@ top:50px;
 }
 
 .b div > img {
-  width: 70%;
+  width: 80%;
   margin: auto;
+  border-radius: 7px;
 }
 .c img {
   width: 33%;
+  border-radius: 7px;
 }
+
 .c {
   display: flex;
   justify-content: space-between;
@@ -88,6 +86,10 @@ top:50px;
   margin: auto;
   margin-top: 20px;
 }
+.d>img {
+   width: 100%;
+  border-radius: 7px;
+ }
 
 .f2 {
   display: grid;
@@ -101,7 +103,7 @@ top:50px;
 
 .f2 img {
   width: 100%;
-
+  height: 100%;
   border-radius: 10px;
 }
 
@@ -120,11 +122,11 @@ top:50px;
   margin-top: 20px;
 }
 
-.move{
-   position: ;
-   width: 100%;
-   border: 1px solid red;
-   height: fit-content;
+.move {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: fit-content;
 }
 /* @media screen and (max-width:1200px) {
     .mainbody{
@@ -282,135 +284,16 @@ top:50px;
   
  } */
 
-/* @media screen and (max-width: 700px) {
-     
-     
-   
-     
-     .contant{
-       min-height: 600px;
-       
-     }
-      
-     .left >svg:nth-child(1){
-        position: absolute;
-        left: -34.5%;
-        top: 23.6%;
-        width: 70%;
-       height: auto;
-        align-self: flex-end;
-        z-index: 100;
-      
-     }
-     .left >svg:nth-child(2){
-        position: absolute;
-        left:-25%;
-        top: 50%;
-        width: 63%;
-       height: auto;
-        align-self: flex-end;
-        z-index: 100;
-       
-     }
-     .right >svg:nth-child(1){
-        position: absolute;
-        right: -23%;
-        top: -19%;
-        width: 62%;
-    
-     }
-     
-     .right >svg:nth-child(2){
-        position: absolute;
-        right: -20%;
-        top: 45%;
-        width: 60%;
-       
-    
-      
-     }
-      
-     .imge{
-        
-         left: 12%;
-         top:27%;
-        
-      
-     }
-     .imge img{
-       width: 300px;
-       height: 300px;
-     }
-      
-     .Button{
-        position: absolute;
-        left: 28%;
-        top:70%;
-        padding: 4px 14px 4px 14px;
-        font-size: 16px;
-  
-     }
-     
- 
-     .pass{
-        position: relative;
-        display: grid;
-       
-        grid-template-columns: repeat(1,1fr);
-        width: 75%;
-        
-     
-     }
-     
-     .pro_box{
-        padding-top:80px;
-        padding-bottom: 230px;
-     }
-     .pass p{
-        width: 85%;
-        height: 70px;
-     }
-      .mdiv{
-       min-width: 100%;
-      
-      }
-     .b {
-       display: flex;
-       gap: 50px;
-       width: 90%;
-       justify-content: space-between;
-       align-items: center;
-       margin: auto;
-     
-       height: 100%;
-       
-     }
-      
-     .b div>img{
-         width: 80%;
-         margin: auto;
-         
-     }
- 
-     
- .f2{
-  
-    width: 93%;
-    gap: 10px;
-    margin-top: 25px;
- }
-  
- .f1{
-  
-    width: 80%;
-    gap: 10px;
-    margin: auto;
-    margin-top: 30px;
-   
- }
- 
- 
- 
- 
+@media screen and (max-width: 800px) {
+  .clock {
+    top: 20%;
+    left: 36%;
+    font-size: 35px;
+    padding: 15px;
   }
-  */
+  #v_bag {
+  
+   min-height: 100vh;
+   
+ }
+}

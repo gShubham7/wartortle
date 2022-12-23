@@ -4,7 +4,7 @@ import { ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn
 
 
 export const AutoMoving = () => {
-  const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
+  const ZoomInScrollOut = batch(Sticky(  ), FadeIn(50,0), ZoomIn());
   const FadeUp = batch(Fade(), Move(), Sticky());
   
   return (
@@ -14,11 +14,13 @@ export const AutoMoving = () => {
          <ScrollPage>
      
      </ScrollPage>
+     
      <ScrollPage>
     <Animator animation={FadeUp}>
       <span style={{ fontSize: "40px" }}>The great aim of education is not knowledge but action.</span>
     </Animator>
   </ScrollPage>
+
   <ScrollPage>
     <Animator animation={ZoomInScrollOut}>
       <span style={{ fontSize: "40px" }}>Change is the end result of all true learning.</span>
@@ -26,10 +28,7 @@ export const AutoMoving = () => {
   </ScrollPage>
 
  
-
-  <ScrollPage>
-   
-  </ScrollPage>
+ 
 
  
  
