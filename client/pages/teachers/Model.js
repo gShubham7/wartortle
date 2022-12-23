@@ -7,7 +7,8 @@ import {
     ModalBody,
     ModalCloseButton,
     Button,
-    Text
+    Text,
+    border
   } from '@chakra-ui/react';
   import React from 'react';
 import { useDisclosure } from '@chakra-ui/react'
@@ -31,7 +32,7 @@ import { useDisclosure } from '@chakra-ui/react'
         fontSize={'sm'}
         rounded={'full'}
         _focus={{
-          bg: 'gray.200',
+          bg: 'gray.300',
         }}
           onClick={() => {
             setOverlay(<OverlayOne />)
@@ -44,13 +45,18 @@ import { useDisclosure } from '@chakra-ui/react'
         <Modal isCentered isOpen={isOpen} onClose={onClose}>
           {overlay}
           <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
+            <ModalHeader>Message</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
-              <Text>Custom backdrop filters!</Text>
+              <Text>Type your message here!</Text>
+              <textarea style={{
+                width:"200px",
+                marginTop:"10px",
+                border:"1px solid #6b88ff"
+              }}></textarea>
             </ModalBody>
             <ModalFooter>
-              <Button onClick={onClose}>Close</Button>
+              <Button>Send</Button>
             </ModalFooter>
           </ModalContent>
         </Modal>
