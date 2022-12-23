@@ -8,8 +8,9 @@ import {
 export const registerUser = (creds) => async (dispatch) => {
   dispatch({ type: REGISTER_REQUEST });
   try {
+    // console.log(creds)
     let res = await axios.post(
-      "https://sample-backend-cvar.onrender.com/user/signup",
+      "https://healthy-duck-jewelry.cyclic.app/auth/register",
       creds
     );
     dispatch({ type: REGISTER_SUCCESS, payload: res.data });

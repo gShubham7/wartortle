@@ -13,7 +13,7 @@ const rootReducer = combineReducers({
   auth: authReducer,
 });
 
-const createComposer =  compose;
+const createComposer = compose;
 export const store = legacy_createStore(
   rootReducer,
   createComposer(applyMiddleware(thunk))

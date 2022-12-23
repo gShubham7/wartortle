@@ -22,9 +22,10 @@ import {
   Box,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { registerUser } from "../../redux/register/register.actions";
 
 const Register = () => {
   const { isAuth } = useSelector((store) => store.auth);
@@ -64,14 +65,15 @@ const Register = () => {
         duration: 4000,
         isClosable: true,
       });
-      console.log(registerCreds);
-      // dispatch(registerUser(registerCreds));
+
+      dispatch(registerUser(registerCreds));
+      router.push("/login");
     }
   };
 
-  if (isRegistered) {
-    <Link href="/login"/>
-  }
+  // if (isRegistered) {
+
+  // }
   if (loading) {
     // return <Loading />;
   } else if (error) {
@@ -94,8 +96,9 @@ const Register = () => {
         color="white"
         zIndex={10}
         margin={"auto"}
-        backgroundColor="rgba(100,100,200,.4)"
+        backgroundColor="rgba(0, 0, 0,.9)"
         borderRadius={20}
+        border="2px solid grey"
       >
         <VStack
           padding={{ base: "20px", md: "20px 100px" }}
@@ -137,6 +140,7 @@ const Register = () => {
                 name="email"
                 type="email"
                 placeholder="Enter Your Email..."
+                color={"black"}
                 bgColor={"gray.100"}
               />
             </FormControl>

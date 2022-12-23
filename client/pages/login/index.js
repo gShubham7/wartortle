@@ -22,16 +22,19 @@ import {
   Box,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../redux/auth/auth.actions";
 
 const Login = () => {
-  // const { isAuth, loading, error, errorMessage } = useSelector(
-  //   (store) => store.auth
-  // );
-  // const dispatch = useDispatch();
+  const { isAuth, loading, error, errorMessage } = useSelector(
+    (store) => store.auth
+  );
+  const dispatch = useDispatch();
   const [loginCreds, setLoginCreds] = useState({});
   const toast = useToast();
+  const router = useRouter();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -58,24 +61,20 @@ const Login = () => {
         duration: 4000,
         isClosable: true,
       });
-      console.log(loginCreds);
-      // dispatch(login(loginCreds));
+      dispatch(login(loginCreds));
+      router.push("/");
     }
   };
 
-  if (false) {
-    // return <Loading />;
-  } 
-  // else if (error) {
-  //   toast({
-  //     title: "Wrong Credentials",
-  //     description: "Incorrect Email or Password",
-  //     status: "error",
-  //     duration: 4000,
-  //     isClosable: true,
-  //   });
-  //   return <Link href="/login" />;
-  // }
+  if (error) {
+    toast({
+      title: "Wrong Credentials",
+      description: "Incorrect Email or Password",
+      status: "error",
+      duration: 4000,
+      isClosable: true,
+    });
+  }
   // if (isAuth) {
   //   toast({
   //     title: "Logged in successfully",
@@ -84,7 +83,7 @@ const Login = () => {
   //     duration: 4000,
   //     isClosable: true,
   //   });
-  //   return <Link href="/register" />;
+  //   router.push("/register");
   // }
 
   return (
@@ -97,8 +96,9 @@ const Login = () => {
         color="white"
         zIndex={10}
         margin={"auto"}
-        backgroundColor="rgba(100,100,200,.4)"
+        backgroundColor="rgba(0, 0, 0,.3)"
         borderRadius={20}
+        border="2px solid grey"
       >
         <VStack
           padding={{ base: "20px", md: "20px 100px" }}
@@ -116,6 +116,7 @@ const Login = () => {
                 name="email"
                 type="email"
                 placeholder="Enter Your Email..."
+                color={"black"}
                 bgColor={"gray.100"}
               />
             </FormControl>
@@ -171,7 +172,7 @@ const Login = () => {
         loop
         style={{ width: "100vw", height: "100vh", objectFit: "cover" }}
       >
-        <source src="/register_bg.mp4" type="video/mp4" />
+        <source src="/Network.mp4" type="video/mp4" />
       </video>
     </>
   );
