@@ -20,9 +20,13 @@ import {
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import style from "./Navbar.module.css";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { ActionLogout } from "../redux/auth/auth.actions";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const { isAuth } = useSelector((store) => store.auth);
+  const dispatch = useDispatch();
 
   return (
     <div className={style.navbar}>
@@ -32,7 +36,13 @@ export default function Nav() {
             <Link href="/">
               <Flex alignItems={"center"}>
                 <Image src="/logo.png" width="16%" marginLeft={"10px"}></Image>
-                <Text fontStyle={"italic"} fontWeight={"bold"} fontSize={"25px"}>Qlick2Learn</Text>
+                <Text
+                  fontStyle={"italic"}
+                  fontWeight={"bold"}
+                  fontSize={"25px"}
+                >
+                  Qlick2Learn
+                </Text>
               </Flex>
             </Link>
           </Box>
@@ -72,7 +82,16 @@ export default function Nav() {
                   <MenuItem>Your profile</MenuItem>
                   <MenuItem>Account Settings</MenuItem>
                   {/* --------------------------------------- */}
-                  <MenuItem>Logout</MenuItem>
+                  {isAuth ? (
+                    <MenuItem onClick={() => dispatch(ActionLogout())}>
+                      Logout
+                    </MenuItem>
+                  ) : (
+                    <Link href={"/login"}>
+                      <MenuItem>Login</MenuItem>
+                    </Link>
+                  )}
+
                   {/* ---------------------------------- */}
                 </MenuList>
               </Menu>

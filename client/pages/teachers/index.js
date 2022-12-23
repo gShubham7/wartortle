@@ -25,7 +25,6 @@ import { useState } from "react";
 
 const Teachers = ({ teachers }) => {
   const router = useRouter();
-  console.group(teachers);
   const [data, setData] = useState(teachers.teachers);
 
   const handleChange = (e) => {
@@ -36,8 +35,6 @@ const Teachers = ({ teachers }) => {
         return ele;
       });
     setData(box);
-    console.log(box);
-    // setData(box)
   };
   const handleChange2 = (e) => {
     let searchVal = e.target.value;
@@ -47,8 +44,6 @@ const Teachers = ({ teachers }) => {
         return ele;
       });
     setData(box);
-    console.log(box);
-    // setData(box)
   };
 
   return (
@@ -82,6 +77,7 @@ const Teachers = ({ teachers }) => {
           <div>
             <Center py={6}>
               <Box
+                key={ele._id}
                 maxW={"320px"}
                 w={"full"}
                 bg={useColorModeValue("white", "gray.900")}
@@ -195,7 +191,6 @@ export async function getStaticProps() {
     "https://healthy-duck-jewelry.cyclic.app/user/teachers"
   );
   let data = await res.json();
-  console.log(data);
 
   return {
     props: {
