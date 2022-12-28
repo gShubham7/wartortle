@@ -6,14 +6,6 @@
 <br />
 
 
-## Team Members.
-1.	Mr. Shubham Gaikwad [Team Leader].
-2.	Mr. Ashutosh Sharma.
-3.	Mr. Prakash Singh.
-4.	Ms. Anjali Dhanjode.
-
-
-
 <h2 align="center">🖥️ Tech Stack</h2>
 
 
